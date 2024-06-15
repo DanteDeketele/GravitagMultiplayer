@@ -37,7 +37,7 @@ namespace GravitagManagementServer
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = actualPath,
-                Arguments = $"-batchmode -nographics {Adress} {Port}",
+                Arguments = $"-batchmode -nographics {Port}",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
@@ -45,7 +45,53 @@ namespace GravitagManagementServer
             };
 
             _process = Process.Start(startInfo);
-            _process.OutputDataReceived += (sender, args) => Console.WriteLine($"[{DateTime.Now}] {_process.Id} - Server: {Name}, Port: {Port} - {args.Data}");
+            _process.OutputDataReceived += (sender, args) =>
+            {
+                // if the data is empty the server may have shut down
+                if (args.Data == null ||args.Data.Count() == 0 || string.IsNullOrWhiteSpace(args.Data) || _process.HasExited)
+                {
+                    OnShutdown();
+                }
+                else if (args.Data != null && args.Data.Contains("Server started"))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"[{DateTime.Now}] {_process.Id} - Server: {Name}, Port: {Port} - Server started");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    // filter out stupid messages
+                    string[] stupid = { "Shader" };
+
+                    if (stupid.Any(args.Data.Contains))
+                    {
+                        return;
+                    }
+
+                    // color type
+                    string type;
+                    if (args.Data != null && args.Data.Contains("Error"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        type = "Error";
+                    }
+                    else if (args.Data != null && args.Data.Contains("Warning"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        type = "Warning";
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        type = "Log";
+                    }
+
+                    
+
+                    Console.WriteLine($"[{DateTime.Now}] {_process.Id} - Server: {Name}, Port: {Port} - {type}: {args.Data}");
+                    Console.ResetColor();
+                }
+            };
             _process.BeginOutputReadLine();
             _process.ErrorDataReceived += (sender, args) => Console.WriteLine($"[{DateTime.Now}] {_process.Id} - Server: {Name}, Port: {Port} - {args.Data}");
             _process.BeginErrorReadLine();
@@ -57,6 +103,17 @@ namespace GravitagManagementServer
             {
                 _process.Kill();
             }
+        }
+
+        public void OnShutdown()
+        {
+            Stop();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string message = $"[{DateTime.Now}] {_process.Id} - Server: {Name}, Port: {Port} - Server shut down";
+            Console.WriteLine(message);
+            Console.ResetColor();
+
+            Program.GameServers.Remove(this);
         }
     }
 }

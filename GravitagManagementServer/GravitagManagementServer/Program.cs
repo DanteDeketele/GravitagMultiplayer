@@ -34,6 +34,7 @@ namespace GravitagManagementServer
             listener.Start();
 
             // Display startup message
+            Console.Title = "Gravitag Management Server";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(StartupMessage(listener));
             Console.ResetColor();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GravitagManagementServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae20bf947c7d334689bdbd17f6ae82fb3eb6c3fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84326082b2b81d56bdaa73103245e168f31136d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GravitagManagementServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GravitagManagementServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

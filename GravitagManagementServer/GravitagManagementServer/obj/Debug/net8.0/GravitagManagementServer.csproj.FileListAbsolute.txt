@@ -16,7 +16,6 @@ C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\obj\Deb
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\obj\Debug\net8.0\GravitagManagementServer.csproj.AssemblyReference.cache
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\obj\Debug\net8.0\Gravitag.766A023F.Up2Date
-C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\bin\Debug\net8.0\GameServer\Build
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\bin\Debug\net8.0\GameServer\Build_Data\app.info
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\bin\Debug\net8.0\GameServer\Build_Data\boot.config
 C:\GravitagMultiplayer\GravitagManagementServer\GravitagManagementServer\bin\Debug\net8.0\GameServer\Build_Data\globalgamemanagers
