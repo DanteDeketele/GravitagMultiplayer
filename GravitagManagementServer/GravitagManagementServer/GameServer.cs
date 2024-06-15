@@ -12,7 +12,8 @@ namespace GravitagManagementServer
         public string Name { get; set; }
         public string Adress { get; set; }
         public int Port { get; set; }
-        public List<Player> Players { get; set; }
+        internal List<Player> Players { get; set; }
+        public int PlayerCount => Players.Count;
 
         private Process _process;
 

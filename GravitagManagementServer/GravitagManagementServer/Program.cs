@@ -7,7 +7,7 @@ namespace GravitagManagementServer
     class Program
     {
         static List<EndpointBase> _endPoints = new List<EndpointBase>();
-        static public int Port = 3000;
+        static public int Port = 7000;
         static public string URL = "http://localhost";
         static string _url = URL + ":" + Port;
         static public List<Player> Players = new List<Player>();

@@ -1,39 +1,49 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ManagementServerManager : MonoBehaviour
 {
-    private const string SERVER_URL = "http://localhost:3000";
+    private const string SERVER_URL = "http://localhost:7000";
     private const float PING_INTERVAL = 1f;
+
+    public int LatestPort { get; private set; }
+
+    private static ManagementServerManager instance;
+    public static ManagementServerManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<ManagementServerManager>();
+            }
+            return instance;
+        }
+    }
+
+    public List<GameServerObject> gameServers = new List<GameServerObject>();
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+
         // Keep the object alive between scenes
         DontDestroyOnLoad(gameObject);
-
-#if GAMESERVER
-        Console.WriteLine("uwu");
-        //lets print a lot of info
-        string info;
-        info = "Unity Version: " + Application.unityVersion + "\n";
-        info += "Platform: " + Application.platform + "\n";
-        info += "Language: " + Application.systemLanguage + "\n";
-        info += "Data Path: " + Application.dataPath + "\n";
-        info += "Persistent Data Path: " + Application.persistentDataPath + "\n";
-        info += "Temporary Cache Path: " + Application.temporaryCachePath + "\n";
-        info += "Cloud Project ID: " + Application.cloudProjectId + "\n";
-        info += "Company Name: " + Application.companyName + "\n";
-        info += "Product Name: " + Application.productName + "\n";
-        info += "Target Frame Rate: " + Application.targetFrameRate + "\n";
-        info += "Internet Reachability: " + Application.internetReachability + "\n";
-
-        Console.WriteLine(info);
-#else
         // Start pinging the server
         StartCoroutine(PingServerRepeatedly());
-#endif
+
+        StartCoroutine(GetServersCoroutine());
     }
 
     private IEnumerator PingServerRepeatedly()
@@ -62,4 +72,49 @@ public class ManagementServerManager : MonoBehaviour
             // no error
         }
     }
+
+    private IEnumerator GetServersCoroutine()
+    {
+        string url = SERVER_URL + "/servers/";
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.LogError("Error: " + request.error);
+        }
+        else
+        {
+
+            string json = request.downloadHandler.text;
+
+            Debug.Log(json);
+            GameServerObjectWrapper wrapper = JsonUtility.FromJson<GameServerObjectWrapper>("{\"servers\":" + json + "}");
+            GameServerObject[] servers = wrapper.servers;
+            gameServers.Clear();
+            gameServers.AddRange(servers);
+        }
+    }
+
+    public void JoinGame(int port)
+    {
+        Debug.Log("Joining game on port " + port);
+        LatestPort = port;
+        SceneManager.LoadScene(1);
+    }
+}
+
+[System.Serializable]
+public struct GameServerObject
+{
+    public string Name;
+    public string Adress;
+    public int Port;
+    public int PlayerCount;
+}
+
+[System.Serializable]
+public class GameServerObjectWrapper
+{
+    public GameServerObject[] servers;
 }

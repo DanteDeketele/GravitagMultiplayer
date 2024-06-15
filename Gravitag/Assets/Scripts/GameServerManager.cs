@@ -17,7 +17,11 @@ public class GameServerManager : MonoBehaviour
 
     private void StartClient()
     {
-        throw new NotImplementedException();
+        int portNumber = ManagementServerManager.Instance.LatestPort;
+
+        NetworkManager.Singleton.GetComponent<UnityTransport>().ConnectionData.Port = (ushort)portNumber;
+        NetworkManager.Singleton.StartClient();
+
     }
 
     private void StartServer()
@@ -37,13 +41,19 @@ public class GameServerManager : MonoBehaviour
 
         NetworkManager.Singleton.StartServer();
 
-        string startupMessage = "";
-        startupMessage += "Server started:";
-        startupMessage += " - scene " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "\n";
-        startupMessage += " - status " + NetworkManager.Singleton.IsServer + "\n";
-        startupMessage += " - transport " + NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name + "\n";
-        startupMessage += " - port " + portNumber + "\n";
-        startupMessage += " - startup args " + string.Join(" ", args) + "\n";
-        Debug.Log(startupMessage);
+        NetworkManager.Singleton.OnServerStarted += () =>
+        {
+            Debug.Log("Server started");
+        };
+
+        NetworkManager.Singleton.OnClientConnectedCallback += (clientId) =>
+        {
+            Debug.Log("Client connected");
+        };
+
+        NetworkManager.Singleton.OnClientDisconnectCallback += (clientId) =>
+        {
+            Debug.Log("Client disconnected");
+        };
     }
 }

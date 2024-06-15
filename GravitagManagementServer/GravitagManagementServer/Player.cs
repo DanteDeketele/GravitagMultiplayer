@@ -27,7 +27,7 @@ namespace GravitagManagementServer
 
         public void Update()
         {
-            if (DateTime.Now - LastInteractionDate > TimeSpan.FromSeconds(2))
+            if (DateTime.Now - LastInteractionDate > TimeSpan.FromSeconds(3))
             {
                 Program.Players.Remove(this);
 
