@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GravitagMultiplayer\\GravitagManagementServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\gameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\gameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\endpoints\\getserversendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\endpoints\\getserversendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\endpoints\\helloendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\endpoints\\helloendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\endpoints\\endpointbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\endpoints\\endpointbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|c:\\gravitagmultiplayer\\gravitagmanagementserver\\gravitagmanagementserver\\endpoints\\pingendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3738422B-7972-43BA-84F7-C738DACA5C8A}|GravitagManagementServer\\GravitagManagementServer.csproj|solutionrelative:gravitagmanagementserver\\endpoints\\pingendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 201,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetServersEndpoint.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\GetServersEndpoint.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\EndPoints\\GetServersEndpoint.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\GetServersEndpoint.cs",
+              "RelativeToolTip": "GravitagManagementServer\\EndPoints\\GetServersEndpoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T16:23:59.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameServer.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\GameServer.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\GameServer.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\GameServer.cs",
+              "RelativeToolTip": "GravitagManagementServer\\GameServer.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwCAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T16:11:12.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PingEndPoint.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\PingEndPoint.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\EndPoints\\PingEndPoint.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\PingEndPoint.cs",
+              "RelativeToolTip": "GravitagManagementServer\\EndPoints\\PingEndPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T15:49:04.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\Player.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\Player.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\Player.cs",
+              "RelativeToolTip": "GravitagManagementServer\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T14:14:59.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HelloEndpoint.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\HelloEndpoint.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\EndPoints\\HelloEndpoint.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\HelloEndpoint.cs",
+              "RelativeToolTip": "GravitagManagementServer\\EndPoints\\HelloEndpoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T14:02:25.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EndpointBase.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\EndpointBase.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\EndPoints\\EndpointBase.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\EndPoints\\EndpointBase.cs",
+              "RelativeToolTip": "GravitagManagementServer\\EndPoints\\EndpointBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T13:57:58.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\Program.cs",
+              "RelativeDocumentMoniker": "GravitagManagementServer\\Program.cs",
+              "ToolTip": "C:\\GravitagMultiplayer\\GravitagManagementServer\\GravitagManagementServer\\Program.cs",
+              "RelativeToolTip": "GravitagManagementServer\\Program.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAAHQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T13:07:52.044Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
