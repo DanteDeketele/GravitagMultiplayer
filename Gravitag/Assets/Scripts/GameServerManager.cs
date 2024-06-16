@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 
 public class GameServerManager : MonoBehaviour
 {
+    [SerializeField] private GameObject playerPrefab;
     void Start()
     {
 #if GAMESERVER
@@ -49,6 +50,8 @@ public class GameServerManager : MonoBehaviour
         NetworkManager.Singleton.OnClientConnectedCallback += (clientId) =>
         {
             Debug.Log("Client connected");
+            var playerInstance = Instantiate(playerPrefab);
+            playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
         };
 
         NetworkManager.Singleton.OnClientDisconnectCallback += (clientId) =>

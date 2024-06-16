@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameServerBuildSettings
   m_EditorClassIdentifier: 
   serverScenes:
-  - {fileID: 102900000, guid: a760072e872da1c41884de1f05578f6c, type: 3}
+  - {fileID: 102900000, guid: f0f0181f3d16d5a488f24c8d11a84fba, type: 3}

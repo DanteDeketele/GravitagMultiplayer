@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 using System.IO;
+using System;
 
 public class GameServerBuildWindow : EditorWindow
 {

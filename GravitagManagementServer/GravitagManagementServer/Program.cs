@@ -44,6 +44,7 @@ namespace GravitagManagementServer
             
             // Create a new GameServer
             new GameServer();
+            new GameServer();
 
             // Run the listener loop
             while (true)
